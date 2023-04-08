@@ -17,7 +17,6 @@
   outline: 0;
   box-sizing: border-box;
   font-family: "Lexend Deca", sans-serif;
-  /* border: 1px solid red; */
 }
 
 html {
@@ -41,7 +40,6 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
 
   width: 100%;
   max-width: 50rem;
