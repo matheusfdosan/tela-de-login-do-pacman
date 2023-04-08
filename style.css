@@ -1,0 +1,225 @@
+:root {
+  --whitesmoke: #f9f9f9;
+  --light-grey: #ececec;
+  --grey: #c4c4c4;
+  --medium-grey: #a7a7a7;
+  --deep-grey: #343434;
+
+  --black: #000000;
+  --white: #ffffff;
+  --red: #cf3c3f;
+  --blue: #1b77f3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+  font-family: "Lexend Deca", sans-serif;
+  /* border: 1px solid red; */
+}
+
+html {
+  font-size: 62.5%;
+}
+
+html,
+body {
+  height: 100vh;
+  font-family: "Source Sans Pro";
+  text-rendering: optimizelegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+main {
+  display: flex;
+  width: 100%;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+  max-width: 50rem;
+  min-height: 100vh;
+
+  background: var(--white);
+  padding: clamp(25px, 3%, 60px);
+}
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login__logo {
+  width: 20rem;
+  margin: 20px 0 50px;
+}
+
+.login__title {
+  color: var(--deep-grey);
+  font-size: 2.4rem;
+  margin-bottom: 30px;
+}
+
+.login__label {
+  width: 100%;
+  display: block;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.login__label span {
+  position: absolute;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--medium-grey);
+  margin: 20px;
+  transition: margin 0.4s ease;
+  cursor: text;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+}
+
+.login__label span.active {
+  font-size: 1.2rem;
+  margin: 8px 12px;
+}
+
+.input {
+  width: 100%;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--deep-grey);
+  background: var(--light-grey);
+  padding: 25px 10px 10px;
+  outline: none;
+}
+
+.input:focus {
+  background: var(--whitesmoke);
+  border: 2px solid var(--black);
+}
+
+.login__icons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
+}
+
+.icons__button {
+  width: 33.3333333%;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.icons__button img:hover {
+  opacity: 0.7;
+}
+
+.icons__button:nth-child(1) {
+  background-color: var(--blue);
+} 
+
+.icons__button img {
+  width: 30px;
+  height: 30px;
+}
+
+.login__label--checkbox {
+  margin-top: 30px;
+  font-size: 1.6rem;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.input--checkbox {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background-color: var(--light-grey);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.input--checkbox:checked {
+  background-color: var(--red);
+}
+
+.input--checkbox:checked::after {
+  content: "✓";
+  position: relative;
+  top: -9%;
+  left: 20%;
+  color: var(--white);
+  font-size: 1.6rem;
+  font-weight: bolder;
+}
+
+.login__button {
+  margin: 30px 0;
+  width: 60px;
+  height: 60px;
+  padding: 0px;
+  border-radius: 20px;
+  border: 2px solid var(--light-grey);
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login__button svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--grey);
+}
+
+.login__button.active {
+  background: var(--red);
+  border-color: var(--red);
+  cursor: pointer;
+}
+
+.login__button.active svg {
+  fill: var(--white);
+}
+
+.login__link {
+  color: var(--grey);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  margin-bottom: 5px;
+}
+
+.login__link:hover {
+  text-decoration: underline;
+}
+
+.wallpaper {
+  width: 100%;
+  background-image: url(imgs/pac-man_wallpaper.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  flex: 1;
+}
